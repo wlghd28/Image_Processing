@@ -1,0 +1,1006 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\PDFView.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""   // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#include <afxribbon.rc>
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\PDFView.ico"
+IDR_PDFTYPE             ICON                    "res\\PDFViewDoc.ico"
+IDI_HLINK_URL           ICON                    "res\\hlnkurl.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_BASIC_TOOLBAR       BITMAP                  "res\\BasicToolbar.bmp"
+IDR_BASIC_TOOLBAR_HOT   BITMAP                  "res\\BasicToolbarHot.bmp"
+IDR_BASIC_TOOLBAR_DISABLED BITMAP                  "res\\BasicToolbarDisabled.bmp"
+IDR_FOPEN_TOOLBAR       BITMAP                  "res\\FileOpenToolbar.bmp"
+IDR_FOPEN_TOOLBAR_HOT   BITMAP                  "res\\FileOpenToolbarHot.bmp"
+IDR_FOPEN_TOOLBAR_DISABLED BITMAP                  "res\\FileOpenToolbarDisabled.bmp"
+IDR_NAV_TOOLBAR         BITMAP                  "res\\NavToolbar.bmp"
+IDR_NAV_TOOLBAR_HOT     BITMAP                  "res\\NavToolbarHot.bmp"
+IDR_NAV_TOOLBAR_DISABLED BITMAP                  "res\\NavToolbarDisabled.bmp"
+IDR_PAGEVIEW_TOOLBAR    BITMAP                  "res\\PagePresentationToolbar.bmp"
+IDR_PAGEVIEW_TOOLBAR_HOT BITMAP                  "res\\PagePresentationToolbarHot.bmp"
+IDR_PAGEVIEW_TOOLBAR_DISABLED BITMAP                  "res\\PagePresentationToolbarDisabled.bmp"
+IDR_MISC_TOOLBAR        BITMAP                  "res\\MiscToolbar.bmp"
+IDR_MISC_TOOLBAR_HOT    BITMAP                  "res\\MiscToolbarHot.bmp"
+IDR_MISC_TOOLBAR_DISABLED BITMAP                  "res\\MiscToolbarDisabled.bmp"
+IDR_FORMS_TOOLBAR       BITMAP                  "res\\FormsToolbar.bmp"
+IDR_FORMS_TOOLBAR_HOT   BITMAP                  "res\\FormsToolbarHot.bmp"
+IDR_FORMS_TOOLBAR_DISABLED BITMAP                  "res\\FormsToolbarDisabled.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_BASIC_TOOLBAR TOOLBAR  25, 20
+BEGIN
+    BUTTON      ID_VIEW_PAN
+END
+
+IDR_FOPEN_TOOLBAR TOOLBAR  25, 20
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    SEPARATOR
+    BUTTON      ID_FILE_SAVE_AS
+    BUTTON      ID_FILE_PRINT
+END
+
+IDR_NAV_TOOLBAR TOOLBAR  25, 20
+BEGIN
+    BUTTON      ID_VIEW_FIRST_PAGE
+    BUTTON      ID_VIEW_PREVIOUS_PAGE
+    SEPARATOR
+    BUTTON      ID_VIEW_NEXT_PAGE
+    BUTTON      ID_VIEW_LAST_PAGE
+    SEPARATOR
+    BUTTON      ID_VIEW_PREV
+    BUTTON      ID_VIEW_NEXT
+END
+
+IDR_PAGEVIEW_TOOLBAR TOOLBAR  25, 20
+BEGIN
+    BUTTON      ID_VIEW_SINGLE_PAGE
+    BUTTON      ID_VIEW_SINGLE_CONT
+    BUTTON      ID_VIEW_FACING_CONT
+    BUTTON      ID_VIEW_FACING
+END
+
+IDR_MISC_TOOLBAR TOOLBAR  25, 20
+BEGIN
+    BUTTON      ID_VIEW_ZOOM_FITWHOLEPAGE
+    BUTTON      ID_VIEW_ZOOM_FITWIDTH
+    SEPARATOR
+    BUTTON      ID_VIEW_ZOOM_ZOOMOUT
+    BUTTON      ID_VIEW_ZOOM_ZOOMIN
+    SEPARATOR
+    BUTTON      ID_VIEW_ROTATE_CLOCKWISE
+    BUTTON      ID_VIEW_ROTATE_COUNTERCLOCKWISE
+    SEPARATOR
+    BUTTON      ID_VIEW_FULLSCREEN
+END
+
+IDR_FORMS_TOOLBAR TOOLBAR  25, 20
+BEGIN
+    BUTTON      ID_VIEW_FORMTOOL_BUTTON
+    BUTTON      ID_VIEW_FORMTOOL_CHECK
+    BUTTON      ID_VIEW_FORMTOOL_COMBO
+    BUTTON      ID_VIEW_FORMTOOL_LIST
+    BUTTON      ID_VIEW_FORMTOOL_RADIO
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             57606
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About PDFView...",           ID_APP_ABOUT
+    END
+END
+
+IDR_PDFTYPE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "Close All",                   ID_FILE_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Save All",                    ID_FILE_SAVEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           57607
+        MENUITEM "P&rint Setup...",             57606
+        MENUITEM SEPARATOR
+        MENUITEM "Export",                      32779
+        MENUITEM SEPARATOR
+        MENUITEM "Document Properties...",      ID_FILE_DOCUMENTPROPERTIES
+        MENUITEM "Document Security...",        ID_FILE_DOCUMENTSECURITY
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Select All",                  ID_SELECTALL
+        MENUITEM "Deselect All",                ID_DESELECTALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "Document"
+    BEGIN
+        MENUITEM "Insert Pages...",             ID_INSERTPAGES
+        MENUITEM "Extract Pages...",            ID_EXTRACTPAGES
+        MENUITEM "Replace Pages...",            ID_REPLACEPAGES
+        MENUITEM "Delete Pages...",             ID_DELETEPAGES
+        MENUITEM SEPARATOR
+        MENUITEM "Crop Pages...",               ID_CROPPAGES
+        MENUITEM "Rotate Pages...",             ID_ROTATEPAGES
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Anti-Aliased Rendering",      ID_OPTIONS_ANTI_ALIAS
+        , CHECKED
+		MENUITEM "Grid-fit Thin Lines",			ID_OPTIONS_GRID_FIT
+        , CHECKED
+		MENUITEM "Auto Stroke Adjust",			ID_OPTIONS_STROKE_ADJUST
+        , CHECKED
+        MENUITEM "Smooth Images",               ID_OPTIONS_SMOOTHIMAGES
+        , CHECKED
+		POPUP "Overprint"
+        BEGIN
+            MENUITEM "Always Off",				ID_OVERPRINT_OFF
+            MENUITEM "Always On",				ID_OVERPRINT_ON
+            MENUITEM "Only for PDF/X files",		ID_OVERPRINT_PDFX
+        END
+		MENUITEM SEPARATOR
+		MENUITEM "Show Transparency Grid",		ID_OPTIONS_SHOW_TRANS_GRID
+        , CHECKED
+		MENUITEM "Gamma",                       ID_OPTIONS_GAMMA
+		MENUITEM "Built-In Rasterizer",         ID_OPTIONS_RASTERIZER
+        , CHECKED
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "Page &Layout"
+        BEGIN
+            MENUITEM "&Single Page",                ID_VIEW_SINGLE_PAGE
+            MENUITEM "Single &Continuous",          ID_VIEW_SINGLE_CONT
+            MENUITEM "Facing &Continuous",          ID_VIEW_FACING_CONT
+            MENUITEM "&Facing",                     ID_VIEW_FACING
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About PDFView...",           ID_APP_ABOUT
+    END
+END
+
+IDR_THUMB_CONTEXT MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Insert Pages...",             ID_INSERTPAGES
+        MENUITEM "Extract Pages...",            ID_EXTRACTPAGES
+        MENUITEM "Replace Pages...",            ID_REPLACEPAGES
+        MENUITEM "Delete Pages...",             ID_DELETEPAGES
+        MENUITEM SEPARATOR
+        MENUITEM "Crop Pages...",               ID_CROPPAGES
+        MENUITEM "Rotate Pages...",             ID_ROTATEPAGES
+        MENUITEM SEPARATOR
+        MENUITEM "Small Thumbnails",            ID_SMALLTHUMBNAILS, CHECKED
+        MENUITEM "Large Thumbnails",            ID_LARGETHUMBNAILS, CHECKED
+    END
+END
+
+IDR_THUMBVIEW_CONTEXT MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Select All",                  ID_SELECTALL
+        MENUITEM "Select Odd",                  ID_SELECTODD
+        MENUITEM "Select Even",                 ID_SELECTEVEN
+        MENUITEM SEPARATOR
+        MENUITEM "Small Thumbnails",            ID_SMALLTHUMBNAILS, CHECKED
+        MENUITEM "Large Thumbnails",            ID_LARGETHUMBNAILS, CHECKED
+    END
+END
+
+IDR_HLINK_POPUP MENU 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Open",                       ID_POPUP_OPEN
+        MENUITEM "Copy Shor&tcut",              ID_POPUP_COPYSHORTCUT
+        MENUITEM "Add to &Favorites",           ID_POPUP_ADDTOFAVORITES
+        MENUITEM "Add to &Desktop",             ID_POPUP_ADDTODESKTOP
+        MENUITEM "P&roperties",                 ID_POPUP_PROPERTIES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+	189,            ID_VIEW_ZOOM_ZOOMOUT,   VIRTKEY, CONTROL
+	187,            ID_VIEW_ZOOM_ZOOMIN,    VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 202, 80
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About PDFView"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,59,57,14,WS_GROUP
+    LTEXT           "PDFTron PDFView Version 1.0",IDC_STATIC,52,18,99,8
+    LTEXT           "www.pdftron.com",IDC_WEB_LINK,71,38,60,8
+    LTEXT           "Copyright (C) 2001-2020 PDFTron Systems",IDC_STATIC,41,28,
+                    123,8
+END
+
+IDD_EXTRACT_PAGES DIALOGEX 0, 0, 187, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Extract Pages"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,77,69,50,14
+    LTEXT           "To: ",IDC_STATIC,93,27,15,8
+    EDITTEXT        IDC_EDIT1,42,24,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,109,24,40,14,ES_AUTOHSCROLL
+    CONTROL         "Delete pages after extracting",IDC_DELETE_PAGES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,49,110,10
+    CONTROL         "Selected",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,7,9,44,
+                    10
+    CONTROL         "From:",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,7,26,35,
+                    10
+END
+
+IDD_DELETE_PAGES DIALOGEX 0, 0, 193, 72
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Delete Pages"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Selected",IDC_OPSELECTED,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,7,9,44,10
+    CONTROL         "From:",IDC_OPFROM,"Button",BS_AUTORADIOBUTTON,7,26,35,
+                    10
+    EDITTEXT        IDC_FROM,42,24,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TO,105,24,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,136,51,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,82,51,50,14
+    LTEXT           "To: ",IDC_STATIC,89,27,15,8
+    LTEXT           "of 20000",IDC_PAGENUM,149,27,36,8
+END
+
+IDD_INSERT_PAGES DIALOGEX 0, 0, 187, 127
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Insert Pages"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "After",IDC_LOCATION,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,45,23,32,10
+    CONTROL         "Before",IDC_LOCATION2,"Button",BS_AUTORADIOBUTTON,82,23,
+                    37,10
+    CONTROL         "First",IDC_PAGE_POS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,18,50,30,10
+    CONTROL         "Last",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,18,64,35,
+                    10
+    CONTROL         "Page Number:",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,18,
+                    78,61,10
+    EDITTEXT        IDC_PAGE_NUM,82,76,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,130,106,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,77,106,50,14
+    LTEXT           "Insert File:",IDC_STATIC,7,9,36,8
+    LTEXT           "Location:",IDC_STATIC,7,24,31,8
+    GROUPBOX        "Page",IDC_STATIC,7,38,173,58
+    LTEXT           "Static",IDC_FILENAME,49,9,131,8
+END
+
+IDD_STD_SECUR_EDIT DIALOGEX 0, 0, 238, 262
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Standard Security"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,127,241,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,181,241,50,14
+    GROUPBOX        " Password ",IDC_STATIC,7,31,224,95
+    EDITTEXT        IDC_USER_PSWD_EDIT,84,62,135,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_OWNER_PSWD_EDIT,84,103,135,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Password required to open document",IDC_USER_PSWD_CHK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,49,133,10
+    CONTROL         "Password required to change permissions and passwords",
+                    IDC_OWNER_PSWD_CHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    21,89,195,10
+    GROUPBOX        " Permissions ",IDC_STATIC,7,129,224,106
+    LTEXT           "User Password:",IDC_STATIC,29,65,53,8
+    LTEXT           "Owner password: ",IDC_STATIC,24,105,57,8
+    LTEXT           "Encryption level:",IDC_STATIC,7,11,53,8
+    COMBOBOX        IDC_KEY_STRENGTH,67,9,152,44,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Print",IDC_PRINT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    21,170,30,10
+    CONTROL         "Hight Resolution Print",IDC_HIGH_REZ_PRINT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,182,84,10
+    CONTROL         "Modify Document",IDC_DOC_MODIFY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,194,71,10
+    CONTROL         "Content Extraction",IDC_EXTRACT_CONTENTS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,127,170,74,10
+    CONTROL         "Modify Annotations",IDC_MOD_ANNOT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,218,76,10
+    CONTROL         "Fill in Forms",IDC_FILL_FORMS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,21,206,52,10
+    CONTROL         "Accessibility Support",IDC_ACCESS_SUPPORT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,127,182,81,10
+    CONTROL         "Document Assembly",IDC_ASSEMBLE_DOC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,127,194,80,10
+    LTEXT           "Grayed out chekboxes do not apply to current revision of the security handler.",
+                    IDC_STATIC,21,142,198,20
+END
+
+IDD_ERROR DIALOGEX 0, 0, 289, 159
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Error Report"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_DETAIL_MSG,16,60,257,66,0,WS_EX_CLIENTEDGE
+    LTEXT           "",IDC_ERROR_MSG,16,18,257,24
+    DEFPUSHBUTTON   "OK",IDOK,232,137,50,14
+    GROUPBOX        "Detail",IDC_STATIC,7,49,275,84
+    GROUPBOX        "Error Message",IDC_STATIC,7,7,275,40
+END
+
+IDD_DOCPROP_SECURITY DIALOGEX 0, 0, 206, 178
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "Security"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Security Method: ",IDC_STATIC,26,17,56,8
+    LTEXT           "User Password:",IDC_STATIC,26,39,50,8
+    LTEXT           "Owner Password:",IDC_STATIC,26,50,56,8
+    LTEXT           "Encryption Level:",IDC_STATIC,26,28,56,8
+    LTEXT           "Print:",IDC_PRINT_LB,26,68,17,8
+    LTEXT           "Hight Resolution Print:",IDC_HIGH_REZ_PRINT_LB,26,80,71,
+                    8
+    LTEXT           "Modify Document:",IDC_DOC_MODIFY_LB,26,92,58,8
+    LTEXT           "Fill in Forms:",IDC_FILL_FORMS_LB,26,104,39,8
+    LTEXT           "Modify Annotations:",IDC_MOD_ANNOT_LB,26,116,63,8
+    LTEXT           "Content Extraction:",IDC_EXTRACT_CONTENTS_LB,26,128,61,
+                    8
+    LTEXT           "Accessibility Support",IDC_ACCESS_LB,26,140,66,8
+    LTEXT           "None",IDC_SECURITY_METHOD,106,17,93,8
+    LTEXT           "",IDC_ENCRYPTION_LEVEL,106,28,93,8
+    LTEXT           "No",IDC_USER_PWD,106,39,93,8
+    LTEXT           "No",IDC_OWNER_PWD,106,50,93,8
+    LTEXT           "Allowed",IDC_PRINT,106,68,93,8
+    LTEXT           "Allowed",IDC_HIGH_REZ_PRINT,106,80,93,8
+    LTEXT           "Allowed",IDC_DOC_MODIFY,106,92,93,8
+    LTEXT           "Allowed",IDC_FILL_FORMS,106,104,93,8
+    LTEXT           "Allowed",IDC_MOD_ANNOT,106,116,93,8
+    LTEXT           "Allowed",IDC_EXTRACT_CONTENTS,106,128,93,8
+    LTEXT           "Allowed",IDC_ACCESS_SUPPORT,106,140,93,8
+    LTEXT           "Document Assembly",IDC_ASSEMBLE_DOC2_LB,26,152,65,8
+    LTEXT           "Allowed",IDC_ASSEMBLE_DOC2,106,152,93,8
+END
+
+IDD_DOCPROP_CREATION DIALOG  0, 0, 218, 199
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "Creation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "File:",IDC_STATIC,10,10,14,8
+    LTEXT           "Title:",IDC_STATIC,10,28,16,8
+    LTEXT           "Subject:",IDC_STATIC,10,46,27,8
+    LTEXT           "Author:",IDC_STATIC,10,63,24,8
+    LTEXT           "Keywords:",IDC_STATIC,10,82,34,8
+    LTEXT           "Creator:",IDC_STATIC,10,100,26,8
+    LTEXT           "Producer:",IDC_STATIC,10,118,32,8
+    LTEXT           "Created:",IDC_STATIC,10,135,28,8
+    LTEXT           "Modified:",IDC_STATIC,10,154,30,8
+    LTEXT           "Security:",IDC_STATIC,10,172,28,8
+    EDITTEXT        IDC_TITLE,53,25,142,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SUBJECT,53,42,142,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AUTHOR,53,60,142,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_KEYWORDS,53,79,142,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CREATOR,53,97,142,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PRODUCER,53,114,142,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_CREATED_DATE,53,135,142,8
+    LTEXT           "",IDC_MOD_DATE,53,154,142,8
+    LTEXT           "",IDC_SECURITY,53,172,142,8
+    LTEXT           "",IDC_FILE,53,10,136,8
+END
+
+IDD_DOC_SECURITY DIALOG  0, 0, 211, 98
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Document Security"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,154,77,50,14
+    COMBOBOX        IDC_SEC_HANDLER_CHOICE,68,38,136,49,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Security Handler:",IDC_STATIC,7,40,55,8
+    PUSHBUTTON      "Change Settings...",IDC_CHANGE_SECUR_SETTINGS,138,56,66,
+                    14
+    LTEXT           "Use this dialog to view and modify security settings.\nChanges will be applied when the document is saved. ",
+                    IDC_STATIC,7,7,197,25
+    PUSHBUTTON      "View Settings...",IDC_VIEW_SETTINGS,68,56,66,14
+END
+
+IDD_AUTHORIZE DIALOGEX 0, 0, 205, 70
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Password"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        ID_PASSWORD,46,25,151,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,94,49,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,148,49,50,14
+    LTEXT           "Document is protected:",IDC_STATIC_TITLE,7,6,191,16
+    LTEXT           "Password: ",IDC_STATIC,7,28,36,8
+END
+
+IDD_HLINK_PROPERTIES DIALOG  0, 0, 207, 169
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDI_HLINK_URL,IDC_STATIC,7,7,18,20
+    EDITTEXT        IDC_NAME,44,14,156,25,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,44,193,1
+    LTEXT           "Address (URL):",IDC_URL_PROMPT,7,60,28,24
+    EDITTEXT        IDC_URL,44,63,156,14,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER | NOT WS_TABSTOP
+END
+
+IDD_PROGRESS_MONITOR DIALOG  0, 0, 226, 46
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,179,25,40,14
+    CONTROL         "Progress1",IDC_PROGRESS_BAR,"msctls_progress32",
+                    WS_BORDER | 0x1,7,7,212,14
+END
+
+IDD_IMAGE_EXPORT DIALOGEX 0, 0, 131, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Export to Image"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,75,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,22,57,50,14
+    GROUPBOX        "Output Quality",IDC_STATIC,7,7,117,42
+    LTEXT           "DPI",IDC_STATIC,64,26,12,8
+    EDITTEXT        IDC_DPI,16,23,40,14,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_OPTIONS_DIALOG DIALOGEX 0, 0, 187, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,24,50,14
+    EDITTEXT        IDC_GAMMA,54,28,44,12,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "PDFView.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "PDFView.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 73
+    END
+
+    IDD_EXTRACT_PAGES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_DELETE_PAGES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 186
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 65
+    END
+
+    IDD_INSERT_PAGES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        VERTGUIDE, 18
+        VERTGUIDE, 82
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_STD_SECUR_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        VERTGUIDE, 21
+        VERTGUIDE, 127
+        VERTGUIDE, 219
+        BOTTOMMARGIN, 255
+        HORZGUIDE, 9
+        HORZGUIDE, 73
+    END
+
+    IDD_ERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 282
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_DOCPROP_SECURITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        VERTGUIDE, 14
+        VERTGUIDE, 26
+        VERTGUIDE, 106
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_DOCPROP_CREATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        VERTGUIDE, 10
+        VERTGUIDE, 53
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_DOC_SECURITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        VERTGUIDE, 68
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_AUTHORIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_HLINK_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_PROGRESS_MONITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_IMAGE_EXPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 124
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_OPTIONS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_MANIFEST            RT_MANIFEST             "res\\PDFView.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HLINK               CURSOR                  "res\\hlink.cur"
+IDC_DISABLED_HLINK      CURSOR                  "res\\disabled.cur"
+IDC_HAND_CUR            CURSOR                  "res\\hand.cur"
+IDC_DRAG_CUR            CURSOR                  "res\\drag.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "PDFTron PDFView"
+    IDR_PDFTYPE             "\nPDF\nPDF\nPDF Files (*.pdf)\n.pdf\nPDF.Document\nPDF.Document"
+    IDS_HLINK_PROPERTIES    "Properties"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "PDFTron PDFView"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_DOCUMENTPROPERTIES 
+                            "Activate Document Properties dialog box\nDocument Properties"
+    ID_FILE_DOCUMENTSECURITY 
+                            "Examine or edit security settings associated with the document.\nDocument Security"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_POPUP_COPYSHORTCUT   "Copy this shortcut to the clipboard"
+    ID_POPUP_ADDTOFAVOURITES "Add this shortcut to Favorites."
+    ID_POPUP_PROPERTIES     "Show the properties of this item"
+    ID_POPUP_ADDTOFAVORITES "Add this shortcut to your Favorites"
+    ID_POPUP_ADDTODESKTOP   "Add this shortcut to the Desktop"
+    ID_POPUP_OPEN           "Opens this shortcut"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_CLOSEALL        "Close all active documents\nClose All"
+    ID_FILE_SAVEALL         "Saves all active documents\nSave All"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_PAN             "Hand Tool\nHand Tool"
+    ID_VIEW_FIRST_PAGE      "Go to first page\nFirst Page"
+    ID_VIEW_PREVIOUS_PAGE   "Go to last page\nLast Page"
+    ID_VIEW_NEXT_PAGE       "Go to the next page\nNext Page"
+    ID_VIEW_LAST_PAGE       "Go to the previous page\nPrevious Page"
+    ID_VIEW_PREV            "Go to previous view\nPrevious View"
+    ID_VIEW_NEXT            "Go to next view\nNext View"
+    ID_VIEW_SINGLE_PAGE     "Single page layout\nSingle Page"
+    ID_VIEW_SINGLE_CONT     "Single continuous page layout\nContinuous"
+    ID_VIEW_FACING_CONT     "Facing continuous page layout\nContinuous"
+    ID_VIEW_FACING          "Facing page layout\nFacing"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_ZOOM_FITWHOLEPAGE "Fit page to the window\nFit Page"
+    ID_VIEW_ZOOM_FITWIDTH   "Fith page width to the window\nFit Page Width"
+    ID_VIEW_ZOOM_ZOOMOUT    "Zoom Out\nZoom Out"
+    ID_VIEW_ZOOM_ZOOMIN     "Zoom In\nZoom In"
+    ID_VIEW_ROTATE_CLOCKWISE "Rotate Clockwise\nRotate Clockwise"
+    ID_VIEW_ROTATE_COUNTERCLOCKWISE 
+                            "Rotate counter-clockwise\nRotate counter-clockwise"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\PDFView.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"   // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

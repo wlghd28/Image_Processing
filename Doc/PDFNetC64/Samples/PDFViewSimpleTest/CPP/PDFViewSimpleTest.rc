@@ -1,0 +1,256 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PDFVIEWSIMPLE       ICON                    "PDFViewSimpleTest.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+ID_PDFVIEWSIMPLE MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Open",                        IDM_FILE_OPEN
+        MENUITEM "Open URL",                    IDM_FILE_OPENURL
+        MENUITEM "Save",                        IDM_FILE_SAVE
+        MENUITEM "Save As",                     IDM_FILE_SAVEAS
+        MENUITEM "Print",                       IDM_FILE_PRINT
+        MENUITEM "Exit",                        IDM_EXIT
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Find...",                     IDM_EDIT_FIND
+        MENUITEM "Copy",                        IDM_EDIT_COPY
+        MENUITEM "Select All",                  IDM_EDIT_SELECTALL
+    END
+    POPUP "View"
+    BEGIN
+        POPUP "Page Layout"
+        BEGIN
+            MENUITEM "Single Page",                 IDM_PAGELAYOUT_SINGLEPAGE
+            MENUITEM "Single Continuous",           IDM_PAGELAYOUT_SINGLECONTINUOUS
+            MENUITEM "Facing",                      IDM_PAGELAYOUT_FACING
+            MENUITEM "Facing Continuous",           IDM_PAGELAYOUT_FACINGCONTINUOUS
+            MENUITEM "Facing (Cover)",              IDM_PAGELAYOUT_FACING_COVER
+            MENUITEM "Facing Continuous (Cover)",   IDM_PAGELAYOUT_FACINGCONTINUOUS_COVER
+        END
+        POPUP "Page View Mode"
+        BEGIN
+            MENUITEM "Fit Page",                    IDM_PAGEVIEWMODE_FITPAGE
+            MENUITEM "Fit Width",                   IDM_PAGEVIEWMODE_FITWIDTH
+        END
+        MENUITEM "Zoom In",                     IDM_VIEW_ZOOMIN
+        MENUITEM "Zoom Out",                    IDM_VIEW_ZOOMOUT
+        MENUITEM "Toggle Navigation Panel",     ID_TOGGLE_NAV_PANEL
+    END
+    POPUP "Tool"
+    BEGIN
+        MENUITEM "Pan",                         IDM_TOOL_PAN
+        MENUITEM "Structural Selection",        IDM_TOOL_STRUCTURALSELECTION
+        MENUITEM "Rectangle Selection",         IDM_TOOL_RECTANGLESELECTION
+        MENUITEM "Rectangle Zoom In",           IDM_TOOL_RECTANGLEZOOMIN
+        MENUITEM "Rectangle Zoom Out",          IDM_TOOL_RECTANGLEZOOMOUT
+        MENUITEM "Annotation Editing",          IDM_TOOL_ANNOTATIONEDITING
+        MENUITEM "Note Creation",               IDM_TOOL_TEXTANNOTCREATION
+        MENUITEM "Line Creation",               IDM_TOOL_LINECREATION
+        MENUITEM "Arrow Creation",              IDM_TOOL_ARROWCREATION
+        MENUITEM "Rectangle Creation",          IDM_TOOL_RECTANGLECREATION
+        MENUITEM "Oval Creation",               IDM_TOOL_OVALCREATION
+        MENUITEM "FreeHand Tool",               IDM_TOOL_FREEHANDTOOL
+        MENUITEM "Stamp Creation Tool",         IDM_TOOL_STAMPCREATIONTOOL
+        MENUITEM "Highlight Tool",              ID_TOOL_HIGHLIGHTTOOL
+        MENUITEM "Underline Tool",              ID_TOOL_UNDERLINETOOL
+        MENUITEM "Strikeout Tool",              ID_TOOL_STRIKEOUTTOOL
+        MENUITEM "Squiggly Underline Tool",     ID_TOOL_SQUIGGLYUNDERLINETOOL
+        MENUITEM "Callout Text Box Tool",       ID_TOOL_CALLOUTTEXTBOXTOOL
+        MENUITEM "Simple Text Box Tool",        ID_TOOL_SIMPLETEXTBOXTOOL
+        MENUITEM "Polygon Tool",                ID_TOOL_POLYGONTOOL
+        MENUITEM "PolyLine Tool",               ID_TOOL_POLYLINETOOL
+        MENUITEM "File Attachment Tool",        ID_TOOL_FILEATTACHMENTTOOL
+        MENUITEM "Sound Insertion Tool",        ID_TOOL_SOUNDATTACHMENTTOOL
+        MENUITEM "Movie Insertion Tool",        ID_TOOL_MOVIEINSERTIONTOOL
+        MENUITEM "Caret Placement Tool",        ID_TOOL_CARETPLACEMENTTOOL
+        MENUITEM "Redaction Tool",              ID_TOOL_REDACTIONTOOL
+        MENUITEM "Digital Signature Tool",      ID_TOOL_DIGITALSIGNATURETOOL
+        MENUITEM "Barcode Creation Tool",       ID_TOOL_BARCODECREATIONTOOL
+        MENUITEM "Text Field Creation Tool",    ID_TOOL_TEXTFIELDCREATION
+        MENUITEM "Check Box Creation Tool",     ID_TOOL_CHECKBOXCREATIONTOOL
+        MENUITEM "Radio Button Creation Tool",  ID_TOOL_RADIOBUTTON
+        MENUITEM "List Box Creation Tool",      ID_TOOL_LISTBOX
+        MENUITEM "Combo Box Creation Tool",     ID_TOOL_COMBOBOX
+        MENUITEM "Button Creation Tool",        ID_TOOL_BUTTONCREATIONTOOL
+    END
+    POPUP "Page Navigation"
+    BEGIN
+        MENUITEM "Go to Next Page",             IDM_PAGENAVIGATION_GOTONEXTPAGE
+        MENUITEM "Go to Previous Page",         IDM_PAGENAVIGATION_GOTOPREVIOUSPAGE
+        MENUITEM "Go to Last Page",             IDM_PAGENAVIGATION_GOT
+        MENUITEM "Go to First Page",            IDM_PAGENAVIGATION_GOTOFIRSTPAGE
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",                       IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_PDFVIEWSIMPLE ACCELERATORS
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 216, 75
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About PDFViewSimple"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            128,IDC_STATIC,14,14,20,20
+    LTEXT           "PDFViewSimple, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,42,26,114,10
+    DEFPUSHBUTTON   "OK",IDOK,159,54,50,14,WS_GROUP
+    LTEXT           "Simple Sample of using PDFViewCtrl in Win32",IDC_STATIC,31,41,171,10
+END
+
+IDD_OPENURL DIALOGEX 0, 0, 309, 68
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open PDF From URL"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,198,48,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,252,48,50,14
+    LTEXT           "Address",IDC_STATIC,6,6,48,12
+    LTEXT           "PDF Password",IDC_STATIC,6,24,46,12
+    EDITTEXT        IDC_OPENURL_URL,60,6,240,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OPENURL_PASSWORD,60,24,240,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 68
+    END
+
+    IDD_OPENURL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "PDFViewSimple"
+    IDC_PDFVIEWSIMPLE       "PDFVIEWSIMPLE"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
